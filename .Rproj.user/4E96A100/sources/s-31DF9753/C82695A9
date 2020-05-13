@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589314709670.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C82695A9",
+    "lastKnownWriteTime" : 1589188661,
+    "last_content_update" : 1589188661,
+    "path" : "~/repos/repos-ShinyApps/DxTestApps/Diagnostic accuracy calculator/global.R",
+    "project_path" : "global.R",
+    "properties" : {
+        "cursorPosition" : "0,19",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

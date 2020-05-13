@@ -1,0 +1,12 @@
+name: DiagnosticAccuracyCalculator
+title: DiagnosticAccuracyCalculator
+username:
+account: twaza
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2286994
+bundleId: 3141117
+url: https://twaza.shinyapps.io/DiagnosticAccuracyCalculator/
+when: 1589361268.58377
+asMultiple: FALSE
+asStatic: FALSE

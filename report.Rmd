@@ -1,0 +1,60 @@
+<!---
+Copyright (c) 2017, the authors (see AUTHORS.txt).
+-->
+
+---
+title: "Report on Clinical Accuracy and Utility"
+output: pdf_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+geometry: margin=1in
+---
+
+
+# 1. Introduction
+Welcome to the NIHR Diagnostic Evidence Co-operative Newcastle's Clinical Diagnostic Accuracy application report.  The results of your analysis are reported below.
+
+For a population size of `r input$n` where the prevalence of the condition to be detected is `r input$prevalence*100`%, the test, detected the condition with sensitivity `r input$sensitivity*100`% and specificity `r input$specificity*100`%.  
+
+
+The first plot (Figure 1 in this document) helps to visualise this population.  For `r input$n` people, `r input$n*input$prevalence` of those will have the condition.  Those who have the condition are shown by a triangle shape.  Those without the condition are shown by the circle.  
+
+The second plot (Figure 2) helps to visualise what happens after each person has had the diagnostic test.  Now those people who have the disease are shown by in coral, and those who do not have the condition, by cyan. The number of people who do and do not have the disease has not changed between both plots.  
+
+The second plot also shows how the results of the diagnostic test re-classifies the people. 
+
+If the diagnostic test is 100% accurate, those people who test positive are those who have the condition (true positives) and are shown by the cross in this plot.  Likewise, those who test negative are those who do not have the condition (true negatives) and are shown by triangles in the plot.  You can test this by setting the sensitivity and specificity to 1 in the application, and pressing the 'Update the graphs' button.  
+
+However, in reality, it is rare that a test is 100% accurate and will often mis-classify some of the people tested.  
+
+One way in which a test will mis-classify people is if the sensitivity is less than 1 and some people who do have the condition, will have a negative test result.  These are called false negatives and are shown by circles in the plot.  For the sensiticity of `r input$sensitivity`, there are `r input$FalseNeg` false negatives for a population of `r input$n` people.   
+
+The other way a test may mis-classify people is if the specificity is less than 1.  This means that some people who do not have the condition will have a positive test result.  These are called false positives and are shown by the triangle shape.  For the specificity of `r input$specificity`, there are `r input$FalsePos` false positives for a population of `r input$n` people.  
+
+
+Confidence intervals 
+
+
+A contigency 2 x 2 table.... 
+
+```{r, echo = FALSE, fig.cap= "Population of people with and without the condition", fig.width=6,fig.height=6}
+popplot2(input$n, input$prevalence, input$sensitivity, input$specificity, 
+                          input$sorted, input$ciFlag)
+```
+
+```{r,  kable, results='asis',
+
+kable(dx2x2Table)
+```
+
+
+
+```{r, echo = FALSE, fig.cap= "Test accuracy: true and false positives; false and true negatives.", fig.width=6,fig.height=6}
+pvdf(input$n, input$prevalence, input$sensitivity, input$specificity)
+```
+
+
+```{r, echo = FALSE, fig.cap= "Distribution of index test results: true and false positives; false and true negatives.", fig.width=6,fig.height=6}
+distributionplots(input$n, input$prevalence, input$sensitivity, input$specificity)
+```
+
+

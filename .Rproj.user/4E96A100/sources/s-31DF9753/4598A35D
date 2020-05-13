@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589314701100.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1122657337",
+    "id" : "4598A35D",
+    "lastKnownWriteTime" : 1589356318,
+    "last_content_update" : 1589356318475,
+    "path" : "~/repos/repos-ShinyApps/DxTestApps/Diagnostic accuracy calculator/FunctionsUsedByTestAccuracyApps.R",
+    "project_path" : "FunctionsUsedByTestAccuracyApps.R",
+    "properties" : {
+        "cursorPosition" : "457,0",
+        "scrollLine" : "440"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
