@@ -310,10 +310,12 @@ shinyServer(
         # DiagrammeR likes its variables to be in the global environment
         #  assign() used because <<- puts variables in an unpredictable environment
         req(TP(), FP(), FN(), TN(), sensitivity(), specificity(), prevalence())
-        assign("TPglobal", round(TP()), envir = .GlobalEnv)
-        assign("FPglobal", round(FP()), envir = .GlobalEnv)
-        assign("FNglobal", round(FN()), envir = .GlobalEnv)
-        assign("TNglobal", round(TN()), envir = .GlobalEnv)
+        assign("TPglobal", round(TP(), digits = 1), envir = .GlobalEnv)
+        assign("FPglobal", round(FP(), digits = 1), envir = .GlobalEnv)
+        assign("FNglobal", round(FN(), digits = 1), envir = .GlobalEnv)
+        assign("TNglobal", round(TN(), digits = 1), envir = .GlobalEnv)
+        assign("TestPosGlobal", round((TP() + FP()), digits = 1), envir = .GlobalEnv)
+        assign("TestNegGlobal", round((FN() + TN()), digits = 1), envir = .GlobalEnv)
         assign("SensPCTglobal", round(sensitivity() * 100, digits = 1), envir = .GlobalEnv)
         assign("SensPCT1Mglobal", round(100 - sensitivity() * 100, digits = 1), envir = .GlobalEnv)
         assign("SpecPCTglobal", round(specificity() * 100, digits = 1), envir = .GlobalEnv)

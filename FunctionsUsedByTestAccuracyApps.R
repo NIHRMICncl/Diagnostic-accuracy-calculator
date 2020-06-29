@@ -381,6 +381,7 @@ tab2x2gt <- function(TP, FP, FN, TN, tab2x2Labels) {
   # FP = 85
   # FN = 45
   # TN = 765
+  # # don't forget to uncomment tab2x2Labels in tab2x2gtStats()
 
 
   tab2x2 <- tibble(
@@ -448,6 +449,28 @@ tab2x2gt <- function(TP, FP, FN, TN, tab2x2Labels) {
       label = tab2x2Labels$spannerColumnLabel,
       columns = vars(present, absent)
     ) %>%
+    
+    tab_style(
+      style = list(
+        cell_fill(color = "#F9E3D6")),
+      locations = cells_body(
+        columns = vars(present, absent),
+        rows = 1:2)
+    ) %>% 
+    
+    tab_style(
+      style = cell_borders(
+        sides = c("right"),
+        color = "#BBBBBB",
+        weight = px(1.5),
+        style = "solid"
+      ),
+      locations = cells_body(
+        columns = vars(absent),
+        rows = 1:3
+      )
+    ) %>% 
+
     tab_source_note("") %>%
     tab_source_note(sensSourceNote) %>%
     tab_source_note(specSourceNote) %>%
@@ -662,8 +685,8 @@ testnegnb -> testnb
 }
 
 [1]: paste0('Population = ', (TPglobal + FPglobal + FNglobal + TNglobal))
-[2]: paste0('Test result +ve = ', (TPglobal + FPglobal))
-[3]: paste0('Test result -ve = ', (FNglobal + TNglobal))
+[2]: paste0('Test result +ve = ', (TestPosGlobal))
+[3]: paste0('Test result -ve = ', (TestNegGlobal))
 [4]: paste0('True Positive = ', TPglobal)
 [5]: paste0('False Positive = ', FPglobal)
 [6]: paste0('False Negative = ', FNglobal)
