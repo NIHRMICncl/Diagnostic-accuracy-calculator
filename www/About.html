@@ -3,11 +3,11 @@
   <head>
     <meta content="text/html; charset=windows-1252"
       http-equiv="content-type">
-    <title>tab1</title>
+    <title>About</title>
   </head>
   <body>
     <div class="tabbable tabs-above" style="color: rgb(51, 51, 51);
-      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-family: 'Helvetica Neue',Hel vetica,Arial,sans-serif;
       font-size: 13.6364px; font-style: normal; font-variant: normal;
       font-weight: normal; letter-spacing: normal; line-height:
       18.1818px; text-align: start; text-indent: 0px; text-transform:
@@ -15,41 +15,33 @@
       rgb(255, 255, 255);">
       <div class="tab-content">
         <div class="tab-pane active" data-value="Using the App"
-          id="tab-7136-1" style="display: block;">
-          <h2><span style="font-weight: bold; color: rgb(51, 51, 255);">Welcome
-to
-
-
-
-
-
-
-
-
-              the <a href="http://www.newcastle.mic.nihr.ac.uk">NIHR
-                Newcastle MIC</a>'s calculator for the main accuracy
-              measures of a diagnostic test</span></h2>
-          <p> This is the first of a small collection of interactive <a
-              href="http://shiny.rstudio.com/" target="_blank">Shiny</a>
-            apps that allow you to calculate diagnostic accuracy
-            statistics and explore the intricacies of evaluating and
-            using diagnostic tests:<br>
-          </p>
+          id="tab-7136-1" style="display: block;">This is the first of a
+          collection of interactive <a href="http://shiny.rstudio.com/"
+            target="_blank">Shiny</a> apps that allow you to calculate
+          diagnostic accuracy statistics and explore the intricacies of
+          evaluating and using diagnostic tests:<br>
           <ul>
-            <li><b>&nbsp;Diagnostic accuracy calculator</b>.&nbsp; (this
-              app) to calculate the main diagnostic accuracy statistics
-              from either:<br>
+            <li><b>&nbsp;Diagnostic accuracy calculator</b>.&nbsp; App
+              to calculate the main diagnostic accuracy statistics.<br>
             </li>
             <ul>
-              <li>True and false positive (TP, FP), and true and false
-                negative (TN, FN) counts<br>
-              </li>
-              <li>Sensitivity and specificity. AND prevalence, and the
-                size of the study from which sensitivity and specificity
-                were estimated</li>
             </ul>
             <li><a
                 href="https://micncltools.shinyapps.io/micsamplesizeshinyapp2/"><b>Sample
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   size planner</b></a>. Interactive app for estimating
               sample sizes for diagnostic accuracy studies.<br>
             </li>
@@ -67,6 +59,20 @@ to
               threshold for a test with a continuous result. <font
                 color="#cc9933"><b>(under construction)</b><b>.</b></font></li>
             <li><b><b><b>Interpreting</b></b> the clinical </b><b>utility
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -93,144 +99,33 @@ to
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   construction)</b><b>.</b></font></li>
           </ul>
-          <p><br>
-            =======================================NOTES KEPT FOR
-            POSSIBLE FUTURE USE
-ELSEWHERE=================================================================</p>
-          <ul>
-          </ul>
-          <h2><span style="font-weight: bold; color: rgb(51, 51, 255);">"Technical
-
-
-
-
-
-
-
-
-              accuracy" of a diagnostic test</span><br>
-          </h2>
-          <p>We use the term<b>&nbsp;</b><b><span style="font-style:
-                italic;">technical accuracy</span></b> (which answers
-            questions about the accuracy of classification) to contrast
-            with&nbsp;<b><span style="font-style: italic;">clinical
-                accuracy</span></b> (which answers questions about the
-            accuracy of prediction given that the test result is
-            positive or negative). <br>
-          </p>
-          <p> </p>
-          <div class="tabbable tabs-above" style="color: rgb(51, 51,
-            51); font-family: 'Helvetica
-            Neue',Helvetica,Arial,sans-serif; font-size: 13.6364px;
-            font-style: normal; font-variant: normal; font-weight:
-            normal; letter-spacing: normal; line-height: 18.1818px;
-            text-align: start; text-indent: 0px; text-transform: none;
-            white-space: normal; word-spacing: 0px; background-color:
-            rgb(255, 255, 255);">
-            <div class="tab-content">
-              <div class="tab-pane active" data-value="Using the App"
-                id="tab-7136-1" style="display: block;"> The accuracy of
-                a new diagnostic test is assessed by comparing results
-                from the new test with those from a reference test. <br>
-                When the tests agree, the new test's results are true
-                positive (<b>TP</b>) or true negative (<b>TN</b>).<br>
-                When the tests do not agree, the new test's results are
-                false positive (<b>FP</b>) or false negative (<b>FN</b>).<br>
-                <br>
-                <b>Sensitivity</b> is the true positive rate: TP / (TP +
-                FN). Sensitivity is measured in people who have the
-                condition being tested for.<br>
-                <b>Specificity</b> is the true negative rate: TN&nbsp;
-                (TN + FP). Specificity is measured in people who do not
-                have the condition being tested for.<br>
-                <br>
-                The accuracy of a diagnostic test can be assessed in
-                either a case-control study or a cohort study.<br>
-                <br>
-                A <b>case-control study</b> has two groups of
-                participants: people who are known to have the disease
-                (to estimate sensitivity), and people who are known to
-                not have the condition (to estimate specificity).<br>
-                <br>
-                A <b>cohort study</b> has one group of participants:
-                people who may or may not have the condition, and
-                therefore sensitivity and specificity can be calculated.<br>
-                <br>
-                If the cohort is representative of the population in
-                which the test will be used, the relevant <b>prevalence</b>
-                of the condition can be calculated (as TP / (TP + FP +
-                FN + TN), and this allows the relevant <b>positive and
-                  negative predictive values</b> to be calculated.<br>
-                <br>
-                <b><font color="#990000"> Prevalence should never be
-                    calculated from a case-control study, because it
-                    will not apply to a real population. <br>
-                    <br>
-                  </font></b> Since predictive values depend on
-                prevalence, positive and negative predictive values
-                calculated from a case-control study will be misleading,
-                wrong, erroneous, incorrect, invalid, false, and untrue,
-                <br>
-              </div>
-            </div>
-          </div>
-          <p> </p>
-          <h2><font color="#333399">How to use this app</font></h2>
-          <h3><span style="color: rgb(51, 51, 255);"><span
-                style="font-weight: bold;">Click on the </span></span><span
-              style="font-weight: bold; color: rgb(51, 51, 255);">tabs
-              at the top to switch between different pages<br>
-            </span></h3>
-          <table style="text-align: left; width: 867px; height: 146px;"
-            border="1" cellspacing="2" cellpadding="2">
-            <tbody>
-              <tr>
-                <td>
-                  <div style="text-align: left;"> </div>
-                  <img style="width: 897px; height: 115px;" alt=""
-                    title="Pic of tabs" src="Tabs3.PNG"><br>
-                  <p><span style="font-weight: bold;">&nbsp;<span
-                        style="color: rgb(51, 51, 255);">Figure.</span></span>
-                    The tabs at the top of the app's window.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ol>
-          </ol>
-          The tabs provide the following information: and graphs:
-          <ol>
-            <li><span style="color: rgb(51, 51, 255); font-weight:
-                bold;">About</span> --- this tab, about using the input
-              panel on the left to generate and modify the graphs, and
-              the tabs at the top to select information and graphs.<br>
-              <br>
-            </li>
-            <li><span style="color: rgb(51, 51, 255); font-weight:
-                bold;">Technical accuracy</span> --- how to read the
-              graphs shown in tab 3<br>
-              <br>
-            </li>
-            <li><span style="color: rgb(51, 51, 255); font-weight:
-                bold;">Test accuracy</span> <br>
-              ---- a graph showing a group of people, some with the
-              condition being tested for and some without.<br>
-              ---- a graph showing how these people are classified by a
-              diagnostic test as true positives, false positives, false
-              negatives, or true negatives (Tp, Fp, Fn, Tn).&nbsp; <br>
-              .</li>
-            <li>"<span style="color: rgb(51, 51, 255); font-weight:
-                bold;">2 x 2 table</span>" --- tables of the data shown
-              in the graphs, the technical and the clinical measures of
-              diagnostic accuracy.<br>
-              <br>
-            </li>
-          </ol>
         </div>
       </div>
     </div>
-    <br class="Apple-interchange-newline">
+    You can use this app to:<br>
+    <ul>
+      <li>Calculate diagnostic accuracy measures</li>
+      <li>See how predictive values vary with prevalence</li>
+      <li>See the uncertainties in positive and negative predictive
+        values<br>
+      </li>
+    </ul>
+    <br>
   </body>
 </html>
