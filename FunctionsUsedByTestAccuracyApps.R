@@ -449,15 +449,15 @@ tab2x2gt <- function(TP, FP, FN, TN, tab2x2Labels) {
       label = tab2x2Labels$spannerColumnLabel,
       columns = vars(present, absent)
     ) %>%
-    
     tab_style(
       style = list(
-        cell_fill(color = "#F9E3D6")),
+        cell_fill(color = "#F9E3D6")
+      ),
       locations = cells_body(
         columns = vars(present, absent),
-        rows = 1:2)
-    ) %>% 
-    
+        rows = 1:2
+      )
+    ) %>%
     tab_style(
       style = cell_borders(
         sides = c("right"),
@@ -469,8 +469,7 @@ tab2x2gt <- function(TP, FP, FN, TN, tab2x2Labels) {
         columns = vars(absent),
         rows = 1:3
       )
-    ) %>% 
-
+    ) %>%
     tab_source_note("") %>%
     tab_source_note(sensSourceNote) %>%
     tab_source_note(specSourceNote) %>%
@@ -614,11 +613,15 @@ populationdf <- function(n, prevalence, sensitivity, specificity, sorted) {
 
 
 
-
+##%######################################################%##
+#                                                          #
+####                naturalFrequencies                  ####
+#                                                          #
+##%######################################################%##
 
 naturalFrequencies <- function() {
 
-  # # for testing
+  ### for testing
   # TP <- 100
   # FP <- 10
   # FN <- 10
