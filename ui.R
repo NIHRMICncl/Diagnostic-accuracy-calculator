@@ -1,4 +1,9 @@
-#################### ui for ShinyApp to calculate diagnostic accuracy measures ###############################
+##%######################################################%##
+#                                                          #
+####                 ui for ShinyApp to                 ####
+####       calculate diagnostic accuracy measures       ####
+#                                                          #
+##%######################################################%##
 
 ui <- function(request) {
   navbarPage(
@@ -8,6 +13,13 @@ ui <- function(request) {
     tabPanel(
       "Diagnostic accuracy calculator",
       includeHTML("www/CalculatorHead.html"),
+      
+##%######################################################%##
+#                                                          #
+####                   sidebarPanel                     ####
+#                                                          #
+##%######################################################%##
+    
       sidebarPanel(
         fluidRow(
           span("Enter text for titles and labels on tables and graphs", style = "color:seagreen; font-style:italic"),
@@ -41,6 +53,13 @@ ui <- function(request) {
           bookmarkButton("Get a link with current inputs")
         )
       ),
+
+##%######################################################%##
+#                                                          #
+####                    main panel                      ####
+#                                                          #
+##%######################################################%##
+
       mainPanel(
         navbarPage(
           title = "",
@@ -89,6 +108,13 @@ ui <- function(request) {
             # tabPanel("Population", plotOutput("populationPlot"), plotOutput("testedPlots")),
             # tabPanel("Distributions", plotOutput("distributionplots"))
           ),
+          
+##%######################################################%##
+#                                                          #
+####                   other panels                     ####
+#                                                          #
+##%######################################################%##
+          
           # tabPanel("Tables", includeHTML("www/Tables.html")),
           tabPanel("Guide to using the calculator", includeHTML("www/Guide to using the calculator.html")),
           tabPanel("Guide to using the results", includeHTML("www/Guide to using the results.html")),
@@ -125,11 +151,13 @@ ui <- function(request) {
     # ),
     #
 
-    #
-    # ###################################
-    # #
-    # #     credits as a running footer
-    # #
+
+##%######################################################%##
+#                                                          #
+####            credits as a running footer             ####
+#                                                          #
+##%######################################################%##
+
 
     tabPanel("Acknowledgements", includeHTML("www/Acknowledgements.html")),
     tabPanel("Contact", includeHTML("www/Contact.html")),
