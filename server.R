@@ -5,7 +5,11 @@ shinyServer(
   function(input, output, session) {
     session$onSessionEnded(stopApp) # it can be annoying that when you close the browser window, the app is still running and you need to manually press “Esc” to kill it
 
-    ##### dynamic UI-s
+##%######################################################%##
+#                                                          #
+####                   dynamic UI-s                     ####
+#                                                          #
+##%######################################################%##
 
     output$dataEntryTitle <-
       renderUI({
@@ -58,7 +62,11 @@ shinyServer(
         }
       })
 
-    ##### reactive expressions
+##%######################################################%##
+#                                                          #
+####               reactive expressions                 ####
+#                                                          #
+##%######################################################%##
 
 
     sensitivity <- reactive({
@@ -234,7 +242,11 @@ shinyServer(
       )
     })
 
-    ##### outputs
+##%######################################################%##
+#                                                          #
+####                      outputs                       ####
+#                                                          #
+##%######################################################%##
 
     observeEvent(input$GoButton,
       {
