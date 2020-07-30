@@ -31,6 +31,9 @@ LoadPackages <- function() {
   library(plotly)
   library(gt)
   library(DiagrammeR)
+  library(shinyWidgets)
+  library(shinybusy)
+  library(shinydisconnect)
   # ...
 }
 
@@ -795,7 +798,7 @@ predValuesPlot1 <- function(sensitivity, specificity, n, prevalence, ciFlag) {
     scale_y_continuous(limits = c(-0.025, 1.025), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
     # theme(legend.title=element_blank()) +
     theme(legend.position = "none") +
-    labs(y = "Predictive value", x = "Prevalence/Clinical probability") +
+    labs(y = "Predictive value", x = "Pretest probability\n(prevalence or clinical probability)") +
     coord_fixed()
 
   p0 <- ggplotly(p0, tooltip = c("prevalence", "Predictive_Value"))
@@ -931,7 +934,7 @@ predValuesPlot2 <- function(sensitivity, specificity, n, prevalence) {
         ")\n    2) specificity (with ", pvLineSe2$statValue[1], ")"
       ),
       y = "Predictive value",
-      x = "Prevalence/Clinical probability"
+      x = "Pretest probability\n(prevalence or clinical probability)"
     ) +
     coord_fixed()
 
